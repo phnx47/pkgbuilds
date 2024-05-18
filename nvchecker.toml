@@ -1,0 +1,61 @@
+[__config__]
+oldver = "ver.json"
+newver = "nver.json"
+
+[cro-chain-desktop]
+source = "github"
+github = "crypto-com/chain-desktop-wallet"
+use_latest_release = true
+prefix = "v"
+
+[cro-chain-maind]
+source = "github"
+github = "crypto-org-chain/chain-main"
+use_latest_release = true
+prefix = "v"
+
+[ever-surf]
+source = "httpheader"
+url = "https://distribution.services.ever.surf/download/channel/release/linux_64/ever-surf.deb"
+regex = "([0-9]+\\.[0-9]+\\.[0-9]+)"
+header = "Content-Disposition"
+
+[jetbrains-fleet]
+source = "regex"
+url = "https://data.services.jetbrains.com/products/releases?code=FL&latest=true&type=preview"
+regex = "\"version\":\"([0-9]+\\.[0-9]+\\.[0-9]+)"
+
+[ledger-live]
+source = "httpheader"
+url = "https://download.live.ledger.com/latest/linux"
+regex = "([0-9]+\\.[0-9]+\\.[0-9]+)"
+header = "location"
+
+[moon]
+source = "github"
+github = "moonrepo/moon"
+use_latest_release = true
+prefix = "v"
+
+[oxen-electron-wallet]
+source = "github"
+github = "oxen-io/oxen-electron-gui-wallet"
+use_latest_release = true
+prefix = "v"
+
+[proto]
+source = "github"
+github = "moonrepo/proto"
+use_latest_release = true
+prefix = "v"
+
+[rustrover-eap]
+source = "regex"
+url = "https://data.services.jetbrains.com/products/releases?code=RR&latest=true&type=eap"
+regex = "\"build\":\"([0-9]+\\.[0-9]+\\.[0-9]+)"
+
+[solidity]
+source = "github"
+github = "ethereum/solidity"
+use_latest_release = true
+prefix = "v"

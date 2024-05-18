@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "data": {
+    "cro-chain-desktop": {
+      "version": "1.5.0",
+      "gitref": "refs/tags/v1.5.0",
+      "url": "https://github.com/crypto-com/chain-desktop-wallet/releases/tag/v1.5.0"
+    },
+    "cro-chain-maind": {
+      "version": "4.2.9",
+      "gitref": "refs/tags/v4.2.9",
+      "url": "https://github.com/crypto-org-chain/chain-main/releases/tag/v4.2.9"
+    },
+    "ever-surf": {
+      "version": "9.4.4"
+    },
+    "jetbrains-fleet": {
+      "version": "1.34.94"
+    },
+    "ledger-live": {
+      "version": "2.80.0"
+    },
+    "moon": {
+      "version": "1.24.5",
+      "gitref": "refs/tags/v1.24.5",
+      "url": "https://github.com/moonrepo/moon/releases/tag/v1.24.5"
+    },
+    "oxen-electron-wallet": {
+      "version": "1.8.1",
+      "gitref": "refs/tags/v1.8.1",
+      "url": "https://github.com/oxen-io/oxen-electron-gui-wallet/releases/tag/v1.8.1"
+    },
+    "proto": {
+      "version": "0.35.2",
+      "gitref": "refs/tags/v0.35.2",
+      "url": "https://github.com/moonrepo/proto/releases/tag/v0.35.2"
+    },
+    "rustrover-eap": {
+      "version": "241.15989.180"
+    },
+    "solidity": {
+      "version": "0.8.25",
+      "gitref": "refs/tags/v0.8.25",
+      "url": "https://github.com/ethereum/solidity/releases/tag/v0.8.25"
+    }
+  }
+}

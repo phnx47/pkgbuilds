@@ -1,0 +1,95 @@
+[submodule "cro-chain-desktop"]
+	path = cro-chain-desktop
+	url = ssh://aur@aur.archlinux.org/cro-chain-desktop.git
+	branch = master
+	ignore = untracked
+[submodule "cro-chain-desktop-bin"]
+	path = cro-chain-desktop-bin
+	url = ssh://aur@aur.archlinux.org/cro-chain-desktop-bin.git
+	branch = master
+	ignore = untracked
+[submodule "cro-chain-maind-bin"]
+	path = cro-chain-maind-bin
+	url = ssh://aur@aur.archlinux.org/cro-chain-maind-bin.git
+	branch = master
+	ignore = untracked
+[submodule "ever-surf-bin"]
+	path = ever-surf-bin
+	url = ssh://aur@aur.archlinux.org/ever-surf-bin.git
+	branch = master
+	ignore = untracked
+[submodule "jetbrains-fleet"]
+	path = jetbrains-fleet
+	url = ssh://aur@aur.archlinux.org/jetbrains-fleet.git
+	branch = master
+	ignore = untracked
+[submodule "ledger-live"]
+	path = ledger-live
+	url = ssh://aur@aur.archlinux.org/ledger-live.git
+	branch = master
+	ignore = untracked
+[submodule "ledger-live-bin"]
+	path = ledger-live-bin
+	url = ssh://aur@aur.archlinux.org/ledger-live-bin.git
+	branch = master
+	ignore = untracked
+[submodule "ledger-live-git"]
+	path = ledger-live-git
+	url = ssh://aur@aur.archlinux.org/ledger-live-git.git
+	branch = master
+	ignore = untracked
+[submodule "ledger-udev-git"]
+	path = ledger-udev-git
+	url = ssh://aur@aur.archlinux.org/ledger-udev-git.git
+	branch = master
+	ignore = untracked
+[submodule "moon"]
+	path = moon
+	url = ssh://aur@aur.archlinux.org/moon.git
+	branch = master
+	ignore = untracked
+[submodule "moon-bin"]
+	path = moon-bin
+	url = ssh://aur@aur.archlinux.org/moon-bin.git
+	branch = master
+	ignore = untracked
+[submodule "oxen-electron-wallet"]
+	path = oxen-electron-wallet
+	url = ssh://aur@aur.archlinux.org/oxen-electron-wallet.git
+	branch = master
+	ignore = untracked
+[submodule "oxen-electron-wallet-bin"]
+	path = oxen-electron-wallet-bin
+	url = ssh://aur@aur.archlinux.org/oxen-electron-wallet-bin.git
+	branch = master
+	ignore = untracked
+[submodule "proto"]
+	path = proto
+	url = ssh://aur@aur.archlinux.org/proto.git
+	branch = master
+	ignore = untracked
+[submodule "proto-bin"]
+	path = proto-bin
+	url = ssh://aur@aur.archlinux.org/proto-bin.git
+	branch = master
+	ignore = untracked
+[submodule "renovate-git"]
+	path = renovate-git
+	url = ssh://aur@aur.archlinux.org/renovate-git.git
+	branch = master
+	ignore = untracked
+[submodule "rustrover-eap"]
+	path = rustrover-eap
+	url = ssh://aur@aur.archlinux.org/rustrover-eap.git
+	branch = master
+	ignore = untracked
+[submodule "solidity"]
+	path = solidity
+	url = ssh://aur@aur.archlinux.org/solidity.git
+	branch = master
+	ignore = untracked
+[submodule "solidity-bin"]
+	path = solidity-bin
+	url = ssh://aur@aur.archlinux.org/solidity-bin.git
+	branch = master
+	ignore = untracked
