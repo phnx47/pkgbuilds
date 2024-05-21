@@ -39,9 +39,9 @@
       "version": "241.15989.180"
     },
     "solidity": {
-      "version": "0.8.25",
-      "gitref": "refs/tags/v0.8.25",
-      "url": "https://github.com/ethereum/solidity/releases/tag/v0.8.25"
+      "version": "0.8.26",
+      "gitref": "refs/tags/v0.8.26",
+      "url": "https://github.com/ethereum/solidity/releases/tag/v0.8.26"
     }
   }
 }
