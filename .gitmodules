@@ -83,11 +83,6 @@
 	url = ssh://aur@aur.archlinux.org/rustrover-eap.git
 	branch = master
 	ignore = untracked
-[submodule "solidity"]
-	path = solidity
-	url = ssh://aur@aur.archlinux.org/solidity.git
-	branch = master
-	ignore = untracked
 [submodule "solidity-bin"]
 	path = solidity-bin
 	url = ssh://aur@aur.archlinux.org/solidity-bin.git
