@@ -8,6 +8,13 @@ add pkgname:
   git config -f .gitmodules submodule.{{pkgname}}.ignore untracked
   .scripts/sort.gitmodules.sh
 
+remove pkgname:
+  git rm -f {{pkgname}}
+  rm -rf .git/modules/{{pkgname}}
+  git config --remove-section submodule.{{pkgname}}
+  git add {{pkgname}} && git commit -m "{{pkgname}}: remove"
+  git commit -m "{{pkgname}}: remove"
+
 init:
   git submodule update --init
   git submodule foreach git checkout master
