@@ -43,5 +43,5 @@ git commit -m "v${nver}"
 cd ..
 
 nvtake "${srcname}" -c nvchecker.toml
-git add .
-git commit -m "${pkgname}: v${nver}"
+git add "${pkgname}" ver.json
+git commit -m "${srcname}: v${nver}"
