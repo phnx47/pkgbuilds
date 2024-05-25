@@ -7,13 +7,13 @@ add pkgname:
   git submodule add -b master -f ssh://aur@aur.archlinux.org/{{pkgname}}.git
   git config -f .gitmodules submodule.{{pkgname}}.ignore untracked
   .scripts/sort.gitmodules.sh
+  git add .gitmodules && git commit -m "add '{{pkgname}}' pkg"
 
 remove pkgname:
   git rm -f {{pkgname}}
   rm -rf .git/modules/{{pkgname}}
   git config --remove-section submodule.{{pkgname}}
-  git add {{pkgname}} && git commit -m "{{pkgname}}: remove"
-  git commit -m "{{pkgname}}: remove"
+  git commit -m "remove '{{pkgname}}' pkg"
 
 init:
   git submodule update --init
