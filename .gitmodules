@@ -23,6 +23,11 @@
 	url = ssh://aur@aur.archlinux.org/jetbrains-fleet.git
 	branch = master
 	ignore = untracked
+[submodule "ledger-live"]
+	path = ledger-live
+	url = ssh://aur@aur.archlinux.org/ledger-live.git
+	branch = master
+	ignore = untracked
 [submodule "ledger-live-bin"]
 	path = ledger-live-bin
 	url = ssh://aur@aur.archlinux.org/ledger-live-bin.git

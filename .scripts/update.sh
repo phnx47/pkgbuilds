@@ -28,6 +28,12 @@ if [ "${src}" = "github" ] && grep -q "_sha=" "${pkgname}/PKGBUILD"; then
   sed -i "0,/_sha='.*'/s//_sha='${sha}'/" "${pkgname}/PKGBUILD"
 fi
 
+if [ "${pkgname}" = "ledger-live" ]; then
+  echo "Using GitHub API"
+  sha=$(curl "https://api.github.com/repos/LedgerHQ/ledger-live/commits/@ledgerhq/live-desktop@${nver}" | jq -r '.sha')
+  sed -i "0,/_sha='.*'/s//_sha='${sha}'/" "${pkgname}/PKGBUILD"
+fi
+
 cd "${pkgname}"
 updpkgsums
 makepkg -scC
