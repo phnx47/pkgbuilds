@@ -49,11 +49,6 @@ github = "moonrepo/proto"
 use_latest_release = true
 prefix = "v"
 
-[rustrover-eap]
-source = "regex"
-url = "https://data.services.jetbrains.com/products/releases?code=RR&latest=true&type=eap"
-regex = "\"build\":\"([0-9]+\\.[0-9]+\\.[0-9]+)"
-
 [solidity]
 source = "github"
 github = "ethereum/solidity"
