@@ -22,6 +22,9 @@ init:
 pull:
   git submodule foreach git pull origin master
 
+squash:
+  msg="$(git show -s --format=%s)" && git reset --soft HEAD~2 && git commit -m "${msg}"
+
 publish pkgname:
   cd {{pkgname}}; git push
 
