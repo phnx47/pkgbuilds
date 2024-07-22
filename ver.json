@@ -30,6 +30,12 @@
       "gitref": "refs/tags/v1.8.1",
       "url": "https://github.com/oxen-io/oxen-electron-gui-wallet/releases/tag/v1.8.1"
     },
+    "pnpm8": {
+      "version": "8.15.9",
+      "gitref": "refs/tags/v8.15.9",
+      "revision": "70722987121785255e8eb2fc5c88e314ecf570a3",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v8.15.9"
+    },
     "proto": {
       "version": "0.38.3",
       "gitref": "refs/tags/v0.38.3",
