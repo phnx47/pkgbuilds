@@ -33,3 +33,4 @@ nvcheck:
 
 update pkgname:
   .scripts/update.sh {{pkgname}}
+  just publish {{pkgname}}
