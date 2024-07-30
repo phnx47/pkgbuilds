@@ -29,7 +29,8 @@ publish pkgname:
   cd {{pkgname}}; git push
 
 nvcheck:
-  .scripts/nvcheck.sh
+  nvchecker -c nvchecker.toml -l warning --failures
+  nvcmp -c nvchecker.toml
 
 update pkgname:
   .scripts/update.sh {{pkgname}}
