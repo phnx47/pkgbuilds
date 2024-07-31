@@ -2,9 +2,9 @@
   "version": 2,
   "data": {
     "cro-chain-desktop": {
-      "version": "1.5.0",
-      "gitref": "refs/tags/v1.5.0",
-      "url": "https://github.com/crypto-com/chain-desktop-wallet/releases/tag/v1.5.0"
+      "version": "1.5.1",
+      "gitref": "refs/tags/v1.5.1",
+      "url": "https://github.com/crypto-com/chain-desktop-wallet/releases/tag/v1.5.1"
     },
     "cro-chain-maind": {
       "version": "4.2.9",
