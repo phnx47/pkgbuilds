@@ -37,9 +37,9 @@
       "url": "https://github.com/pnpm/pnpm/releases/tag/v8.15.9"
     },
     "proto": {
-      "version": "0.41.3",
-      "gitref": "refs/tags/v0.41.3",
-      "url": "https://github.com/moonrepo/proto/releases/tag/v0.41.3"
+      "version": "0.41.4",
+      "gitref": "refs/tags/v0.41.4",
+      "url": "https://github.com/moonrepo/proto/releases/tag/v0.41.4"
     },
     "rustrover-eap": {
       "version": "241.15989.180"
