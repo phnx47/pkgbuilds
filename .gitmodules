@@ -63,11 +63,6 @@
 	url = ssh://aur@aur.archlinux.org/oxen-electron-wallet-bin.git
 	branch = master
 	ignore = untracked
-[submodule "pnpm8-bin"]
-	path = pnpm8-bin
-	url = ssh://aur@aur.archlinux.org/pnpm8-bin.git
-	branch = master
-	ignore = untracked
 [submodule "proto"]
 	path = proto
 	url = ssh://aur@aur.archlinux.org/proto.git

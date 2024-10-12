@@ -44,13 +44,6 @@ github = "oxen-io/oxen-electron-gui-wallet"
 use_latest_release = true
 prefix = "v"
 
-[pnpm8]
-source = "github"
-github = "pnpm/pnpm"
-use_max_tag = true
-include_regex = "v8.([0-9]+\\.[0-9]+)"
-prefix = "v"
-
 [proto]
 source = "github"
 github = "moonrepo/proto"
