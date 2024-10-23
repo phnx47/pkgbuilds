@@ -2,16 +2,16 @@
 
 elf_file=${1}
 
-#pac_flags='-Qo' # local
-pac_flags='-F' # remote
+pac_flags='-Qo' # local
+#pac_flags='-F' # remote
 
-readelf_sed() {
+readelf_filtered() {
   readelf -d "${elf_file}" | sed -n 's|.*Shared library: \[\([^\]*\)\]|/usr/lib/\1|p'
 }
 
 depends='depends=('
 
-for dep in $(readelf_sed | pacman ${pac_flags}q - | sort -u); do
+for dep in $(readelf_filtered | pacman ${pac_flags}q - | sort -u); do
   depends+="'${dep/*\//}'"
 done
 
@@ -21,4 +21,4 @@ depends="${depends//\'\'/\' \'}"
 echo "${depends}"
 
 echo ""
-readelf_sed | pacman ${pac_flags} -
+readelf_filtered | pacman ${pac_flags} -

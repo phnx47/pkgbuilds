@@ -35,3 +35,6 @@ nvcheck:
 update pkgname:
   .scripts/update.sh {{pkgname}}
   just publish {{pkgname}}
+
+readelf elf-file:
+  .scripts/readelf.sh {{elf-file}}
