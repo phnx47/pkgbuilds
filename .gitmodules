@@ -18,11 +18,6 @@
 	url = ssh://aur@aur.archlinux.org/ever-surf-bin.git
 	branch = master
 	ignore = untracked
-[submodule "jetbrains-fleet"]
-	path = jetbrains-fleet
-	url = ssh://aur@aur.archlinux.org/jetbrains-fleet.git
-	branch = master
-	ignore = untracked
 [submodule "ledger-live"]
 	path = ledger-live
 	url = ssh://aur@aur.archlinux.org/ledger-live.git
