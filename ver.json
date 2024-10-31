@@ -14,9 +14,6 @@
     "ever-surf": {
       "version": "9.5.0"
     },
-    "jetbrains-fleet": {
-      "version": "1.42.84"
-    },
     "ledger-live": {
       "version": "2.91.0"
     },
@@ -30,19 +27,10 @@
       "gitref": "refs/tags/v1.8.1",
       "url": "https://github.com/oxen-io/oxen-electron-gui-wallet/releases/tag/v1.8.1"
     },
-    "pnpm8": {
-      "version": "8.15.9",
-      "gitref": "refs/tags/v8.15.9",
-      "revision": "70722987121785255e8eb2fc5c88e314ecf570a3",
-      "url": "https://github.com/pnpm/pnpm/releases/tag/v8.15.9"
-    },
     "proto": {
       "version": "0.41.7",
       "gitref": "refs/tags/v0.41.7",
       "url": "https://github.com/moonrepo/proto/releases/tag/v0.41.7"
-    },
-    "rustrover-eap": {
-      "version": "241.15989.180"
     },
     "solidity": {
       "version": "0.8.28",
