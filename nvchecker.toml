@@ -21,11 +21,9 @@ regex = "([0-9]+\\.[0-9]+\\.[0-9]+)"
 header = "Content-Disposition"
 
 [ledger-live]
-source = "httpheader"
-url = "https://download.live.ledger.com/latest/linux"
-regex = "([0-9]+\\.[0-9]+\\.[0-9]+)"
-header = "location"
-prefix = "@ledgerhq/live-desktop@"
+source = "regex"
+url = "https://download.live.ledger.com/latest-linux.yml"
+regex = "version: ([0-9]+\\.[0-9]+\\.[0-9]+)"
 
 [moon]
 source = "github"
