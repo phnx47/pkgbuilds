@@ -28,9 +28,9 @@
       "url": "https://github.com/oxen-io/oxen-electron-gui-wallet/releases/tag/v1.8.1"
     },
     "proto": {
-      "version": "0.43.0",
-      "gitref": "refs/tags/v0.43.0",
-      "url": "https://github.com/moonrepo/proto/releases/tag/v0.43.0"
+      "version": "0.43.1",
+      "gitref": "refs/tags/v0.43.1",
+      "url": "https://github.com/moonrepo/proto/releases/tag/v0.43.1"
     },
     "solidity": {
       "version": "0.8.28",
