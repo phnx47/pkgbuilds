@@ -21,10 +21,16 @@ sed -E -i "s/pkgrel=.*/pkgrel=1/" "${pkgname}/PKGBUILD"
 src=$(taplo get -f nvchecker.toml "${srcname}".source)
 
 if [ "${src}" = "github" ] && grep -q "_sha=" "${pkgname}/PKGBUILD"; then
-  echo "GitHub source with '_sha'. Using GitHub API"
+  echo "GitHub source with '_sha': using GitHub API"
   repo=$(taplo get -f nvchecker.toml "${srcname}".github)
   vprefix=$(taplo get -f nvchecker.toml "${srcname}".prefix)
   sha=$(curl "https://api.github.com/repos/${repo}/commits/${vprefix}${nver}" | jq -r '.sha')
+  sed -i "0,/_sha='.*'/s//_sha='${sha}'/" "${pkgname}/PKGBUILD"
+fi
+
+if [ "${pkgname}" = "ledger-live" ]; then
+  echo "ledger-live: using GitHub API"
+  sha=$(curl "https://api.github.com/repos/LedgerHQ/ledger-live/commits/@ledgerhq/live-desktop@${nver}" | jq -r '.sha')
   sed -i "0,/_sha='.*'/s//_sha='${sha}'/" "${pkgname}/PKGBUILD"
 fi
 
