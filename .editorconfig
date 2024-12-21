@@ -10,3 +10,6 @@ trim_trailing_whitespace = true
 
 [.gitmodules]
 indent_style = tab
+
+[PKGBUILD]
+keep_padding = true
