@@ -18,9 +18,9 @@
       "version": "2.98.0"
     },
     "moon": {
-      "version": "1.32.1",
-      "gitref": "refs/tags/v1.32.1",
-      "url": "https://github.com/moonrepo/moon/releases/tag/v1.32.1"
+      "version": "1.32.2",
+      "gitref": "refs/tags/v1.32.2",
+      "url": "https://github.com/moonrepo/moon/releases/tag/v1.32.2"
     },
     "oxen-electron-wallet": {
       "version": "1.8.1",
