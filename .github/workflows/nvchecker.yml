@@ -25,7 +25,7 @@ jobs:
         run: pip install nvchecker
 
       - name: Setup Just
-        uses: extractions/setup-just@v2
+        uses: extractions/setup-just@v3
 
       - name: Run check.sh
         run: just nvcheck > nver.txt
