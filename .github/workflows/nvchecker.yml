@@ -43,7 +43,7 @@ jobs:
 
       - name: Send mail
         if: "endsWith(steps.nver.outputs.content, '\n')"
-        uses: dawidd6/action-send-mail@v4
+        uses: dawidd6/action-send-mail@v5
         with:
           server_address: ${{ secrets.MAIL_SMTP_ADDRESS }}
           server_port: 465
