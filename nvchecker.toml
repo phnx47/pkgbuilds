@@ -1,3 +1,6 @@
+# Merged nvchecker configuration
+# Auto-generated - Do not edit directly
+
 [__config__]
 oldver = "ver.json"
 newver = "nver.json"
@@ -8,13 +11,19 @@ github = "crypto-com/chain-desktop-wallet"
 use_latest_release = true
 prefix = "v"
 
-[cro-chain-maind]
+[cro-chain-desktop-bin]
+source = "github"
+github = "crypto-com/chain-desktop-wallet"
+use_latest_release = true
+prefix = "v"
+
+[cro-chain-maind-bin]
 source = "github"
 github = "crypto-org-chain/chain-main"
 use_latest_release = true
 prefix = "v"
 
-[ever-surf]
+[ever-surf-bin]
 source = "httpheader"
 url = "https://distribution.services.ever.surf/download/channel/release/linux_64/ever-surf.deb"
 regex = "([0-9]+\\.[0-9]+\\.[0-9]+)"
@@ -25,7 +34,18 @@ source = "regex"
 url = "https://download.live.ledger.com/latest-linux.yml"
 regex = "version: ([0-9]+\\.[0-9]+\\.[0-9]+)"
 
+[ledger-live-bin]
+source = "regex"
+url = "https://download.live.ledger.com/latest-linux.yml"
+regex = "version: ([0-9]+\\.[0-9]+\\.[0-9]+)"
+
 [moon]
+source = "github"
+github = "moonrepo/moon"
+use_latest_release = true
+prefix = "v"
+
+[moon-bin]
 source = "github"
 github = "moonrepo/moon"
 use_latest_release = true
@@ -37,14 +57,27 @@ github = "oxen-io/oxen-electron-gui-wallet"
 use_latest_release = true
 prefix = "v"
 
+[oxen-electron-wallet-bin]
+source = "github"
+github = "oxen-io/oxen-electron-gui-wallet"
+use_latest_release = true
+prefix = "v"
+
 [proto]
 source = "github"
 github = "moonrepo/proto"
 use_latest_release = true
 prefix = "v"
 
-[solidity]
+[proto-bin]
+source = "github"
+github = "moonrepo/proto"
+use_latest_release = true
+prefix = "v"
+
+[solidity-bin]
 source = "github"
 github = "ethereum/solidity"
 use_latest_release = true
 prefix = "v"
+

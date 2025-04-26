@@ -6,18 +6,31 @@
       "gitref": "refs/tags/v1.5.1",
       "url": "https://github.com/crypto-com/chain-desktop-wallet/releases/tag/v1.5.1"
     },
-    "cro-chain-maind": {
+    "cro-chain-desktop-bin": {
+      "version": "1.5.1",
+      "gitref": "refs/tags/v1.5.1",
+      "url": "https://github.com/crypto-com/chain-desktop-wallet/releases/tag/v1.5.1"
+    },
+    "cro-chain-maind-bin": {
       "version": "5.0.1",
       "gitref": "refs/tags/v5.0.1",
       "url": "https://github.com/crypto-org-chain/chain-main/releases/tag/v5.0.1"
     },
-    "ever-surf": {
+    "ever-surf-bin": {
       "version": "9.5.0"
     },
     "ledger-live": {
       "version": "2.109.0"
     },
+    "ledger-live-bin": {
+      "version": "2.109.0"
+    },
     "moon": {
+      "version": "1.35.1",
+      "gitref": "refs/tags/v1.35.1",
+      "url": "https://github.com/moonrepo/moon/releases/tag/v1.35.1"
+    },
+    "moon-bin": {
       "version": "1.35.1",
       "gitref": "refs/tags/v1.35.1",
       "url": "https://github.com/moonrepo/moon/releases/tag/v1.35.1"
@@ -27,12 +40,22 @@
       "gitref": "refs/tags/v1.8.1",
       "url": "https://github.com/oxen-io/oxen-electron-gui-wallet/releases/tag/v1.8.1"
     },
+    "oxen-electron-wallet-bin": {
+      "version": "1.8.1",
+      "gitref": "refs/tags/v1.8.1",
+      "url": "https://github.com/oxen-io/oxen-electron-gui-wallet/releases/tag/v1.8.1"
+    },
     "proto": {
       "version": "0.48.0",
       "gitref": "refs/tags/v0.48.0",
       "url": "https://github.com/moonrepo/proto/releases/tag/v0.48.0"
     },
-    "solidity": {
+    "proto-bin": {
+      "version": "0.48.0",
+      "gitref": "refs/tags/v0.48.0",
+      "url": "https://github.com/moonrepo/proto/releases/tag/v0.48.0"
+    },
+    "solidity-bin": {
       "version": "0.8.29",
       "gitref": "refs/tags/v0.8.29",
       "url": "https://github.com/ethereum/solidity/releases/tag/v0.8.29"
