@@ -38,3 +38,7 @@ update pkgname:
 
 readelf elf-file:
   .scripts/readelf.sh {{elf-file}}
+
+merge-nvchecker:
+  .scripts/merge-nvchecker.sh
+  git add nvchecker.toml && git commit -m "update nvchecker.toml config"
