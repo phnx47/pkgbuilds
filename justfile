@@ -6,7 +6,7 @@ default:
 add pkgname:
   git submodule add -b master -f ssh://aur@aur.archlinux.org/{{pkgname}}.git
   git config -f .gitmodules submodule.{{pkgname}}.ignore untracked
-  .scripts/sort.gitmodules.sh
+  .scripts/sort-gitmodules.sh
   git add .gitmodules && git commit -m "add '{{pkgname}}' pkg"
 
 remove pkgname:
