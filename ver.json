@@ -36,14 +36,14 @@
       "url": "https://github.com/moonrepo/moon/releases/tag/v1.35.4"
     },
     "oxen-electron-wallet": {
-      "version": "1.8.1",
-      "gitref": "refs/tags/v1.8.1",
-      "url": "https://github.com/oxen-io/oxen-electron-gui-wallet/releases/tag/v1.8.1"
+      "version": "1.8.2",
+      "gitref": "refs/tags/v1.8.2",
+      "url": "https://github.com/oxen-io/oxen-electron-gui-wallet/releases/tag/v1.8.2"
     },
     "oxen-electron-wallet-bin": {
-      "version": "1.8.1",
-      "gitref": "refs/tags/v1.8.1",
-      "url": "https://github.com/oxen-io/oxen-electron-gui-wallet/releases/tag/v1.8.1"
+      "version": "1.8.2",
+      "gitref": "refs/tags/v1.8.2",
+      "url": "https://github.com/oxen-io/oxen-electron-gui-wallet/releases/tag/v1.8.2"
     },
     "proto": {
       "version": "0.48.1",
