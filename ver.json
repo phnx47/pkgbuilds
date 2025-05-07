@@ -56,9 +56,9 @@
       "url": "https://github.com/moonrepo/proto/releases/tag/v0.48.1"
     },
     "solidity-bin": {
-      "version": "0.8.29",
-      "gitref": "refs/tags/v0.8.29",
-      "url": "https://github.com/ethereum/solidity/releases/tag/v0.8.29"
+      "version": "0.8.30",
+      "gitref": "refs/tags/v0.8.30",
+      "url": "https://github.com/ethereum/solidity/releases/tag/v0.8.30"
     }
   }
 }
