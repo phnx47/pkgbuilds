@@ -20,10 +20,10 @@
       "version": "9.5.0"
     },
     "ledger-live": {
-      "version": "2.118.1"
+      "version": "2.120.0"
     },
     "ledger-live-bin": {
-      "version": "2.118.1"
+      "version": "2.120.0"
     },
     "moon": {
       "version": "1.38.3",
