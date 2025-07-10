@@ -1,14 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base",
-    "group:all",
-    ":disableDependencyDashboard"
-  ],
-  "labels": [
-    "dependencies"
-  ],
-  "assignees": [
-    "@phnx47"
-  ]
+  "extends": ["config:base", "group:all", ":disableDependencyDashboard"],
+  "labels": ["dependencies"],
+  "assignees": ["phnx47"],
+  "semanticCommits": "disabled",
+  "commitMessageAction": "bump",
+  "commitMessageTopic": "{{depName}}"
 }
