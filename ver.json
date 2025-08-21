@@ -12,9 +12,9 @@
       "url": "https://github.com/crypto-com/chain-desktop-wallet/releases/tag/v1.5.1"
     },
     "cro-chain-maind-bin": {
-      "version": "6.0.0-2",
-      "gitref": "refs/tags/v6.0.0-2",
-      "url": "https://github.com/crypto-org-chain/chain-main/releases/tag/v6.0.0-2"
+      "version": "6.0.1",
+      "gitref": "refs/tags/v6.0.1",
+      "url": "https://github.com/crypto-org-chain/chain-main/releases/tag/v6.0.1"
     },
     "ever-surf-bin": {
       "version": "9.5.0"
