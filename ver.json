@@ -46,14 +46,14 @@
       "url": "https://github.com/oxen-io/oxen-electron-gui-wallet/releases/tag/v1.8.4"
     },
     "proto": {
-      "version": "0.52.1",
-      "gitref": "refs/tags/v0.52.1",
-      "url": "https://github.com/moonrepo/proto/releases/tag/v0.52.1"
+      "version": "0.52.2",
+      "gitref": "refs/tags/v0.52.2",
+      "url": "https://github.com/moonrepo/proto/releases/tag/v0.52.2"
     },
     "proto-bin": {
-      "version": "0.52.1",
-      "gitref": "refs/tags/v0.52.1",
-      "url": "https://github.com/moonrepo/proto/releases/tag/v0.52.1"
+      "version": "0.52.2",
+      "gitref": "refs/tags/v0.52.2",
+      "url": "https://github.com/moonrepo/proto/releases/tag/v0.52.2"
     },
     "solidity-bin": {
       "version": "0.8.30",
