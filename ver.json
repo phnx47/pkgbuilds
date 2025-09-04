@@ -26,14 +26,14 @@
       "version": "2.126.2"
     },
     "moon": {
-      "version": "1.40.0",
-      "gitref": "refs/tags/v1.40.0",
-      "url": "https://github.com/moonrepo/moon/releases/tag/v1.40.0"
+      "version": "1.40.1",
+      "gitref": "refs/tags/v1.40.1",
+      "url": "https://github.com/moonrepo/moon/releases/tag/v1.40.1"
     },
     "moon-bin": {
-      "version": "1.40.0",
-      "gitref": "refs/tags/v1.40.0",
-      "url": "https://github.com/moonrepo/moon/releases/tag/v1.40.0"
+      "version": "1.40.1",
+      "gitref": "refs/tags/v1.40.1",
+      "url": "https://github.com/moonrepo/moon/releases/tag/v1.40.1"
     },
     "oxen-electron-wallet": {
       "version": "1.8.4",
