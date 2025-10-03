@@ -44,4 +44,4 @@ readelf elf-file:
 
 merge-nvchecker:
   .scripts/merge-nvchecker.sh
-  git add nvchecker.toml && git commit -m "update nvchecker.toml config"
+  git add nvchecker.toml && git commit -m "update nvchecker.toml"

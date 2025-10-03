@@ -23,11 +23,11 @@ github = "crypto-org-chain/chain-main"
 use_latest_release = true
 prefix = "v"
 
-[ever-surf-bin]
-source = "httpheader"
-url = "https://distribution.services.ever.surf/download/channel/release/linux_64/ever-surf.deb"
-regex = "([0-9]+\\.[0-9]+\\.[0-9]+)"
-header = "Content-Disposition"
+# [ever-surf-bin]
+# source = "httpheader"
+# url = "https://distribution.services.ever.surf/download/channel/release/linux_64/ever-surf.deb"
+# regex = "([0-9]+\\.[0-9]+\\.[0-9]+)"
+# header = "Content-Disposition"
 
 [ledger-live]
 source = "regex"
@@ -77,7 +77,7 @@ prefix = "v"
 
 [solidity-bin]
 source = "github"
-github = "ethereum/solidity"
+github = "argotorg/solidity"
 use_latest_release = true
 prefix = "v"
 
