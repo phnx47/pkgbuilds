@@ -13,11 +13,6 @@
 	url = ssh://aur@aur.archlinux.org/cro-chain-maind-bin.git
 	branch = master
 	ignore = untracked
-[submodule "ever-surf-bin"]
-	path = ever-surf-bin
-	url = ssh://aur@aur.archlinux.org/ever-surf-bin.git
-	branch = master
-	ignore = untracked
 [submodule "ledger-live"]
 	path = ledger-live
 	url = ssh://aur@aur.archlinux.org/ledger-live.git
