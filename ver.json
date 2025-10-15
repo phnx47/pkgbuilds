@@ -19,6 +19,9 @@
     "ever-surf-bin": {
       "version": "9.5.0"
     },
+    "fastmail": {
+      "version": "1.0.1"
+    },
     "ledger-live": {
       "version": "2.130.1"
     },
