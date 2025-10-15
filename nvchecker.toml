@@ -23,6 +23,11 @@ github = "crypto-org-chain/chain-main"
 use_latest_release = true
 prefix = "v"
 
+[fastmail]
+source = "regex"
+url = "https://dl.fastmailcdn.com/desktop/production/linux/x64/latest-linux.yml"
+regex = "version: ([0-9]+\\.[0-9]+\\.[0-9]+)"
+
 [ledger-live]
 source = "regex"
 url = "https://download.live.ledger.com/latest-linux.yml"
