@@ -4,7 +4,7 @@ set -eu -o pipefail
 
 WORK_DIR=$(pwd)
 
-dirs=$(find . -type d -not -path "*/\.*" -not -path ".")
+dirs=$(find . -maxdepth 1 -type d -not -path "*/\.*" -not -path "." | sort)
 
 {
   echo "# Merged nvchecker configuration"
