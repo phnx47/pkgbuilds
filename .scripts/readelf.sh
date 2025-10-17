@@ -2,8 +2,8 @@
 
 elf_file=${1}
 
-pac_flags='-Qo' # local
-#pac_flags='-F' # remote
+#pac_flags='-Qo' # local
+pac_flags='-F' # remote
 
 readelf_filtered() {
   readelf -d "${elf_file}" | sed -n 's|.*Shared library: \[\([^\]*\)\]|/usr/lib/\1|p'
