@@ -42,6 +42,9 @@ upgrade pkgname:
 readelf elf-file:
   .scripts/readelf.sh {{elf-file}}
 
+nvcheck-electron pkgname:
+  .scripts/nvcheck-electron.sh {{pkgname}}
+
 merge-nvchecker:
   .scripts/merge-nvchecker.sh
   git add nvchecker.toml && git commit -m "update nvchecker.toml"
