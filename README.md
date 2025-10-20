@@ -8,4 +8,4 @@ AUR packages that I maintain or co-maintain.
 
 ## License
 
-This repository is licensed under the [GNU General Public License version 3](https://opensource.org/licenses/GPL-3.0).
+The tooling in this repository is licensed under the [0BSD](https://spdx.org/licenses/0BSD.html) license.
