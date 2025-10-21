@@ -4,16 +4,10 @@ default:
   just nvcheck
 
 add pkgname:
-  git submodule add -b master -f ssh://aur@aur.archlinux.org/{{pkgname}}.git
-  git config -f .gitmodules submodule.{{pkgname}}.ignore untracked
-  .scripts/sort-gitmodules.sh
-  git add .gitmodules && git commit -m "add '{{pkgname}}' pkg"
+  .scripts/add-package.sh {{pkgname}}
 
 remove pkgname:
-  git rm -f {{pkgname}}
-  rm -rf .git/modules/{{pkgname}}
-  git config --remove-section submodule.{{pkgname}}
-  git commit -m "remove '{{pkgname}}' pkg"
+  .scripts/remove-package.sh {{pkgname}}
 
 init:
   git submodule update --init
