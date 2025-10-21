@@ -25,9 +25,6 @@ clean:
 squash:
   msg="$(git show -s --format=%s)" && git reset --soft HEAD~2 && git commit -m "${msg}"
 
-publish pkgname:
-  cd {{pkgname}}; git push
-
 nvcheck:
   nvchecker -c nvchecker.toml -l warning --failures
   nvcmp -c nvchecker.toml
