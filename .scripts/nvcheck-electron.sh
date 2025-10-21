@@ -21,8 +21,8 @@ oxen-electron-wallet)
   ;;
 
 *)
-  echo "Error: Unknown source '${pkgname}'" >&2
-  echo "Available sources: ledger-live, ledger-live-git, cro-chain-desktop, oxen-electron-wallet" >&2
+  echo "Error: Unknown pkgname '${pkgname}'" >&2
+  echo "Available pkgnames: ledger-live, ledger-live-git, cro-chain-desktop, oxen-electron-wallet" >&2
   exit 1
   ;;
 esac
