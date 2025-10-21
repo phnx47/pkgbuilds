@@ -2,7 +2,7 @@
 
 set -eu -o pipefail
 
-WORK_DIR=$(pwd)
+work_dir=$(pwd)
 
 dirs=$(find . -maxdepth 1 -type d -not -path "*/\.*" -not -path "." | sort)
 
@@ -14,13 +14,16 @@ dirs=$(find . -maxdepth 1 -type d -not -path "*/\.*" -not -path "." | sort)
   echo "oldver = \"ver.json\""
   echo "newver = \"nver.json\""
   echo ""
-} >"$WORK_DIR/nvchecker.toml"
+} >"$work_dir/nvchecker.toml"
 
 for dir in $dirs; do
   if [ -f "$dir/.nvchecker.toml" ]; then
     {
       cat "$dir/.nvchecker.toml"
       echo ""
-    } >>"$WORK_DIR/nvchecker.toml"
+    } >>"$work_dir/nvchecker.toml"
   fi
 done
+
+git add nvchecker.toml
+git commit -m "merge nvchecker.toml"

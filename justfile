@@ -47,4 +47,3 @@ nvcheck-electron pkgname:
 
 merge-nvchecker:
   .scripts/merge-nvchecker.sh
-  git add nvchecker.toml && git commit -m "update nvchecker.toml"
