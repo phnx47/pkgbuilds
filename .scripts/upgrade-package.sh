@@ -22,6 +22,7 @@ makepkg -scC
 makepkg --printsrcinfo >.SRCINFO
 git add PKGBUILD .SRCINFO
 git commit -m "v${nver}"
+git push
 cd ..
 
 nvtake "${pkgname}" -c nvchecker.toml

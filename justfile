@@ -9,6 +9,9 @@ add pkgname:
 remove pkgname:
   .scripts/remove-package.sh {{pkgname}}
 
+upgrade pkgname:
+  .scripts/upgrade-package.sh {{pkgname}}
+
 init:
   git submodule update --init
   git submodule foreach "git config --local status.showUntrackedFiles no && git checkout master"
@@ -28,10 +31,6 @@ publish pkgname:
 nvcheck:
   nvchecker -c nvchecker.toml -l warning --failures
   nvcmp -c nvchecker.toml
-
-upgrade pkgname:
-  .scripts/upgrade.sh {{pkgname}}
-  just publish {{pkgname}}
 
 readelf elf-file:
   .scripts/readelf.sh {{elf-file}}
