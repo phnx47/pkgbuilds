@@ -6,8 +6,8 @@ pkgname="${1%/}"
 
 case "${pkgname}" in
 ledger-live | ledger-live-git)
-  curl -s https://raw.githubusercontent.com/LedgerHQ/ledger-live/refs/heads/main/apps/ledger-live-desktop/package.json |
-    jq -r '.devDependencies.electron'
+  curl -s https://raw.githubusercontent.com/LedgerHQ/ledger-live/refs/heads/main/pnpm-workspace.yaml |
+    grep -E '^\s+electron:' | awk '{print $2}'
   ;;
 
 cro-chain-desktop)
