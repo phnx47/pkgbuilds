@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base", "group:all", ":disableDependencyDashboard"],
+  "extends": ["group:all"],
   "labels": ["dependencies"],
   "assignees": ["phnx47"],
   "semanticCommits": "disabled",
