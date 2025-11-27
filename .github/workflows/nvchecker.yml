@@ -7,28 +7,16 @@ on:
 jobs:
   check-notify:
     name: Check & Notify
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Install pycurl deps
-        run: sudo apt-get update && sudo apt-get install -y libcurl4-openssl-dev
-
-      - name: Update certs
-        run: |
-          sudo update-ca-certificates
-          sudo mkdir -p /etc/pki/tls/certs
-          sudo cp /etc/ssl/certs/ca-certificates.crt /etc/pki/tls/certs/ca-bundle.crt
-
       - name: Install nvchecker
         run: pip install nvchecker
 
-      - name: Setup Just
-        uses: extractions/setup-just@v3
-
-      - name: Run check.sh
-        run: just nvcheck > nver.txt
+      - name: Run nvcheck.sh
+        run: .scripts/nvcheck.sh > nver.txt
 
       - name: Read nver.txt
         id: nver
