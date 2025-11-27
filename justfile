@@ -15,8 +15,7 @@ upgrade pkgname:
 
 # version checking
 nvcheck:
-  nvchecker -c nvchecker.toml -l warning --failures
-  nvcmp -c nvchecker.toml
+  .scripts/nvcheck.sh
 
 nvcheck-electron pkgname:
   .scripts/nvcheck-electron.sh {{pkgname}}
