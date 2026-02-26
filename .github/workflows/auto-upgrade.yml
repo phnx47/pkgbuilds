@@ -1,0 +1,87 @@
+name: Auto Upgrade
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+  push:
+
+jobs:
+  check:
+    name: Check
+    runs-on: ubuntu-latest
+
+    outputs:
+      pkgs: ${{ steps.check.outputs.pkgs }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Install nvchecker
+        run: pip install nvchecker
+
+      - name: Check versions
+        id: check
+        run: |
+          .scripts/nvcheck.sh || [[ $? -eq 1 ]]
+          pkgs=()
+          while IFS= read -r pkg || [[ -n "${pkg}" ]]; do
+            [[ -z "${pkg}" || "${pkg}" == \#* ]] && continue
+            cur=$(jq -r --arg p "${pkg}" '.data[$p].version // empty' ver.json)
+            new=$(jq -r --arg p "${pkg}" '.data[$p].version // empty' nver.json)
+            if [[ -n "${new}" && "${cur}" != "${new}" ]]; then
+              pkgs+=("${pkg}")
+            fi
+          done < auto-upgrade.txt
+          echo "pkgs=$(jq -cn '$ARGS.positional' --args "${pkgs[@]}")" >> "$GITHUB_OUTPUT"
+
+  upgrade:
+    name: Upgrade ${{ matrix.pkg }}
+    needs: check
+    if: needs.check.outputs.pkgs != '[]'
+    runs-on: ubuntu-latest
+    container:
+      image: archlinux:base-devel
+    permissions:
+      contents: write
+    strategy:
+      matrix:
+        pkg: ${{ fromJson(needs.check.outputs.pkgs) }}
+      fail-fast: false
+      max-parallel: 1
+
+    steps:
+      - name: Install deps
+        run: pacman -Syu --noconfirm git openssh nvchecker jq
+
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          submodules: true
+          persist-credentials: true
+
+      - name: Setup build user
+        run: |
+          useradd -m builder
+          echo "builder ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+          chown -R builder:builder "${GITHUB_WORKSPACE}"
+
+      - name: Setup AUR SSH key
+        run: |
+          mkdir -p ~builder/.ssh
+          echo "${{ secrets.AUR_SSH_KEY }}" > ~builder/.ssh/id_ed25519
+          chmod 600 ~builder/.ssh/id_ed25519
+          ssh-keyscan aur.archlinux.org > ~builder/.ssh/known_hosts
+          chown -R builder:builder ~builder/.ssh
+
+      - name: Configure git
+        run: |
+          su -c "git config --global user.name 'phnx47-bot'" builder
+          su -c "git config --global user.email '78849906+phnx47-bot@users.noreply.github.com'" builder
+          git config --global --add safe.directory '*'
+
+      - name: Upgrade
+        run: su -c "cd '${GITHUB_WORKSPACE}' && .scripts/upgrade-package.sh '${{ matrix.pkg }}'" builder
+
+      - name: Push repo
+        run: git push origin main
