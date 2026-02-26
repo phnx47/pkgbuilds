@@ -2,7 +2,8 @@
 
 set -eu -o pipefail
 
-work_dir=$(pwd)
+work_dir="$(cd "$(dirname "$0")/.." && pwd)"
+cd "${work_dir}"
 
 dirs=$(find . -maxdepth 1 -type d -not -path "*/\.*" -not -path "." | sort)
 
@@ -14,14 +15,14 @@ dirs=$(find . -maxdepth 1 -type d -not -path "*/\.*" -not -path "." | sort)
   echo "oldver = \"ver.json\""
   echo "newver = \"nver.json\""
   echo ""
-} >"$work_dir/nvchecker.toml"
+} >"${work_dir}/nvchecker.toml"
 
 for dir in $dirs; do
   if [ -f "$dir/.nvchecker.toml" ]; then
     {
       cat "$dir/.nvchecker.toml"
       echo ""
-    } >>"$work_dir/nvchecker.toml"
+    } >>"${work_dir}/nvchecker.toml"
   fi
 done
 

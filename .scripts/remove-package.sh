@@ -2,6 +2,8 @@
 
 set -eu -o pipefail
 
+cd "$(dirname "$0")/.."
+
 pkgname="${1}"
 
 git submodule add -b master -f "ssh://aur@aur.archlinux.org/${pkgname}.git"

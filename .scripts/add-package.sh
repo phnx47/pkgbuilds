@@ -2,6 +2,8 @@
 
 set -eu -o pipefail
 
+cd "$(dirname "$0")/.."
+
 pkgname="${1}"
 
 git rm -f "${pkgname}"
