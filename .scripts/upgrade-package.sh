@@ -20,7 +20,7 @@ sed -E -i "s/pkgrel=.*/pkgrel=1/" "${pkgname}/PKGBUILD"
 
 cd "${pkgname}"
 updpkgsums
-makepkg -scC
+makepkg -scC --noconfirm
 makepkg --printsrcinfo >.SRCINFO
 git add PKGBUILD .SRCINFO
 git commit -m "v${nver}"
