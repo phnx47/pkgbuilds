@@ -1,7 +1,7 @@
 # PKGBUILDs
 
-[![aur](https://img.shields.io/static/v1?style=flat-square&label=aur&message=phnx47&color=blue&logo=archlinux)](https://aur.archlinux.org/packages?SeB=M&K=phnx47)
-[![nvchecker](https://img.shields.io/github/actions/workflow/status/phnx47/pkgbuilds/nvchecker.yml?branch=main&label=nvchecker&logo=github&style=flat-square)](https://github.com/phnx47/pkgbuilds/actions/workflows/nvchecker.yml)
+[![aur](https://img.shields.io/static/v1?style=flat-square&label=AUR&message=phnx47&color=blue&logo=archlinux)](https://aur.archlinux.org/packages?SeB=M&K=phnx47)
+[![auto-upgrade](https://img.shields.io/github/actions/workflow/status/phnx47/pkgbuilds/auto-upgrade.yml?branch=main&label=auto-upgrade&logo=github%20actions&logoColor=white&style=flat-square)](https://github.com/phnx47/pkgbuilds/actions/workflows/auto-upgrade.yml)
 [![license](https://img.shields.io/github/license/phnx47/pkgbuilds?style=flat-square)](LICENSE)
 
 AUR packages that I maintain or co-maintain.
