@@ -1,7 +1,7 @@
 name: Auto Upgrade
 on:
-  # schedule:
-  #   - cron: "0 6 * * *"
+  schedule:
+    - cron: "0 */8 * * *"
   workflow_dispatch:
 
 jobs:
@@ -10,7 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     outputs:
-      pkgs: ${{ steps.check.outputs.pkgs }}
+      pkgs: ${{ steps.prepare.outputs.pkgs }}
+      nvcmp: ${{ steps.nvcheck.outputs.nvcmp }}
 
     steps:
       - name: Checkout
@@ -19,10 +20,19 @@ jobs:
       - name: Install nvchecker
         run: pip install nvchecker
 
-      - name: Check versions
-        id: check
+      - name: Run nvchecker
+        id: nvcheck
         run: |
-          .scripts/nvcheck.sh || [[ $? -eq 1 ]]
+          output=$(.scripts/nvcheck.sh 2>&1) || [[ $? -eq 1 ]]
+          {
+            echo 'nvcmp<<EOF'
+            echo "${output}"
+            echo EOF
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Prepare upgrade matrix
+        id: prepare
+        run: |
           pkgs=()
           while IFS= read -r pkg || [[ -n "${pkg}" ]]; do
             [[ -z "${pkg}" || "${pkg}" == \#* ]] && continue
@@ -33,6 +43,33 @@ jobs:
             fi
           done < auto-upgrade.txt
           echo "pkgs=$(jq -cn '$ARGS.positional' --args "${pkgs[@]}")" >> "$GITHUB_OUTPUT"
+
+  notify:
+    name: Notify
+    needs: check
+    if: needs.check.outputs.nvcmp != ''
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Add summary
+        run: echo "${{ needs.check.outputs.nvcmp }}" >> $GITHUB_STEP_SUMMARY
+
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v15
+        with:
+          server_address: ${{ secrets.MAIL_SMTP_ADDRESS }}
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: AUR New Version Checker (${{ github.run_number }})
+          body: |
+            nvchecker found new versions via GitHub Actions [1]
+
+            ${{ needs.check.outputs.nvcmp }}
+
+            [1] https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          to: ${{ secrets.MAIL_TO }}
+          from: ${{ secrets.MAIL_FROM }}
 
   upgrade:
     name: Upgrade ${{ matrix.pkg }}
