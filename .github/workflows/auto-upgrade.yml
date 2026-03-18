@@ -55,7 +55,7 @@ jobs:
         run: echo "${{ needs.check.outputs.nvcmp }}" >> $GITHUB_STEP_SUMMARY
 
       - name: Send mail
-        uses: dawidd6/action-send-mail@v15
+        uses: dawidd6/action-send-mail@v16
         with:
           server_address: ${{ secrets.MAIL_SMTP_ADDRESS }}
           server_port: 465
