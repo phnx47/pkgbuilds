@@ -112,6 +112,7 @@ jobs:
 
       - name: Checkout submodule
         run: |
+          su -c "git -C '${GITHUB_WORKSPACE}' pull --rebase" builder
           su -c "git -C '${GITHUB_WORKSPACE}' submodule update --init '${{ matrix.pkg }}'" builder
           su -c "git -C '${GITHUB_WORKSPACE}/${{ matrix.pkg }}' checkout master" builder
 
