@@ -54,9 +54,9 @@
       "url": "https://github.com/moonrepo/proto/releases/tag/v0.56.2"
     },
     "proto-bin": {
-      "version": "0.56.1",
-      "gitref": "refs/tags/v0.56.1",
-      "url": "https://github.com/moonrepo/proto/releases/tag/v0.56.1"
+      "version": "0.56.2",
+      "gitref": "refs/tags/v0.56.2",
+      "url": "https://github.com/moonrepo/proto/releases/tag/v0.56.2"
     },
     "solidity-bin": {
       "version": "0.8.34",
