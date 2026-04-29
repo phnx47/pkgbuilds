@@ -1,4 +1,6 @@
 fastmail
+ledger-live: ledger-udev-git
+ledger-live-bin: ledger-udev-git
 moon
 moon-bin
 proto
