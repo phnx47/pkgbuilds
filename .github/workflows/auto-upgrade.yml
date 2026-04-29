@@ -33,16 +33,20 @@ jobs:
       - name: Prepare upgrade matrix
         id: prepare
         run: |
-          pkgs=()
-          while IFS= read -r pkg || [[ -n "${pkg}" ]]; do
-            [[ -z "${pkg}" || "${pkg}" == \#* ]] && continue
+          entries=()
+          while IFS= read -r line || [[ -n "${line}" ]]; do
+            [[ -z "${line}" || "${line}" == \#* ]] && continue
+            pkg="${line%%:*}"
+            deps_str="${line#*:}"
+            [[ "${deps_str}" == "${line}" ]] && deps_str=""
+            pkg="${pkg// /}"
             cur=$(jq -r --arg p "${pkg}" '.data[$p].version // empty' ver.json)
             new=$(jq -r --arg p "${pkg}" '.data[$p].version // empty' nver.json)
             if [[ -n "${new}" && "${cur}" != "${new}" ]]; then
-              pkgs+=("${pkg}")
+              entries+=("$(jq -cn --arg p "${pkg}" --arg d "${deps_str}" '{pkg: $p, deps: ($d | split(" ") | map(select(length > 0)))}')")
             fi
           done < auto-upgrade.txt
-          echo "pkgs=$(jq -cn '$ARGS.positional' --args "${pkgs[@]}")" >> "$GITHUB_OUTPUT"
+          echo "pkgs=$(printf '%s\n' "${entries[@]}" | jq -cs .)" >> "$GITHUB_OUTPUT"
 
   notify:
     name: Notify
@@ -72,7 +76,7 @@ jobs:
           from: ${{ secrets.MAIL_FROM }}
 
   upgrade:
-    name: Upgrade ${{ matrix.pkg }}
+    name: Upgrade ${{ matrix.entry.pkg }}
     needs: check
     if: needs.check.outputs.pkgs != '[]'
     runs-on: ubuntu-latest
@@ -82,7 +86,7 @@ jobs:
       contents: write
     strategy:
       matrix:
-        pkg: ${{ fromJson(needs.check.outputs.pkgs) }}
+        entry: ${{ fromJson(needs.check.outputs.pkgs) }}
       fail-fast: false
       max-parallel: 1
 
@@ -113,11 +117,21 @@ jobs:
       - name: Checkout submodule
         run: |
           su -c "git -C '${GITHUB_WORKSPACE}' pull --rebase" builder
-          su -c "git -C '${GITHUB_WORKSPACE}' submodule update --init '${{ matrix.pkg }}'" builder
-          su -c "git -C '${GITHUB_WORKSPACE}/${{ matrix.pkg }}' checkout master" builder
+          su -c "git -C '${GITHUB_WORKSPACE}' submodule update --init '${{ matrix.entry.pkg }}'" builder
+          su -c "git -C '${GITHUB_WORKSPACE}/${{ matrix.entry.pkg }}' checkout master" builder
+
+      - name: Build & install AUR deps
+        if: toJson(matrix.entry.deps) != '[]'
+        env:
+          DEPS: ${{ join(matrix.entry.deps, ' ') }}
+        run: |
+          for dep in ${DEPS}; do
+            su -c "git clone --depth 1 https://aur.archlinux.org/${dep}.git /tmp/aur/${dep}" builder
+            su -c "cd /tmp/aur/${dep} && makepkg -si --noconfirm --needed" builder
+          done
 
       - name: Upgrade
-        run: su -c "cd '${GITHUB_WORKSPACE}' && .scripts/upgrade-package.sh '${{ matrix.pkg }}'" builder
+        run: su -c "cd '${GITHUB_WORKSPACE}' && .scripts/upgrade-package.sh '${{ matrix.entry.pkg }}'" builder
 
       - name: Push repo
         run: su -c "git push" builder
