@@ -3,3 +3,4 @@ moon
 moon-bin
 proto
 proto-bin
+solidity-bin
