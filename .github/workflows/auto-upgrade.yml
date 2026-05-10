@@ -23,7 +23,7 @@ jobs:
       - name: Run nvchecker
         id: nvcheck
         run: |
-          output=$(.scripts/nvcheck.sh 2>&1) || [[ $? -eq 1 ]]
+          output=$(.scripts/nvcheck-package.sh 2>&1) || [[ $? -eq 1 ]]
           {
             echo 'nvcmp<<EOF'
             echo "${output}"

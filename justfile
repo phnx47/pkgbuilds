@@ -18,7 +18,7 @@ upgrade pkgname:
 
 # Check all packages for new versions and compare with current
 nvcheck:
-  .scripts/nvcheck.sh
+  .scripts/nvcheck-package.sh
 
 # Get latest Electron version used by a specific package
 nvcheck-electron pkgname:
