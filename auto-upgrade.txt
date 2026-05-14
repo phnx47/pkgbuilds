@@ -6,4 +6,5 @@ moon
 moon-bin
 proto
 proto-bin
+renovate
 solidity-bin
