@@ -68,6 +68,11 @@
 	url = ssh://aur@aur.archlinux.org/proto-bin.git
 	branch = master
 	ignore = untracked
+[submodule "renovate"]
+	path = renovate
+	url = ssh://aur@aur.archlinux.org/renovate.git
+	branch = master
+	ignore = untracked
 [submodule "renovate-git"]
 	path = renovate-git
 	url = ssh://aur@aur.archlinux.org/renovate-git.git
