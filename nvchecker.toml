@@ -17,6 +17,7 @@ github = "crypto-com/chain-desktop-wallet"
 use_latest_release = true
 prefix = "v"
 
+
 [cro-chain-maind-bin]
 source = "github"
 github = "crypto-org-chain/chain-main"
@@ -71,6 +72,12 @@ prefix = "v"
 [proto-bin]
 source = "github"
 github = "moonrepo/proto"
+use_latest_release = true
+prefix = "v"
+
+[renovate]
+source = "github"
+github = "renovatebot/renovate"
 use_latest_release = true
 prefix = "v"
 
