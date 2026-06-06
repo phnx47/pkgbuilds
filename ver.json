@@ -29,9 +29,9 @@
       "version": "4.6.1"
     },
     "moon": {
-      "version": "2.3.1",
-      "gitref": "refs/tags/v2.3.1",
-      "url": "https://github.com/moonrepo/moon/releases/tag/v2.3.1"
+      "version": "2.3.2",
+      "gitref": "refs/tags/v2.3.2",
+      "url": "https://github.com/moonrepo/moon/releases/tag/v2.3.2"
     },
     "moon-bin": {
       "version": "2.3.1",
