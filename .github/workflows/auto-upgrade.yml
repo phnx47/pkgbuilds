@@ -131,7 +131,12 @@ jobs:
           done
 
       - name: Upgrade
-        run: su -c "cd '${GITHUB_WORKSPACE}' && .scripts/upgrade-package.sh '${{ matrix.entry.pkg }}'" builder
+        run: |
+          su -c "
+            cd '${{ github.workspace }}'
+            unset GITHUB_WORKSPACE
+            .scripts/upgrade-package.sh '${{ matrix.entry.pkg }}'
+          " builder
 
       - name: Push repo
         run: su -c "git push" builder
