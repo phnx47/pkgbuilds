@@ -54,9 +54,9 @@
       "url": "https://github.com/moonrepo/proto/releases/tag/v0.57.5"
     },
     "proto-bin": {
-      "version": "0.57.4",
-      "gitref": "refs/tags/v0.57.4",
-      "url": "https://github.com/moonrepo/proto/releases/tag/v0.57.4"
+      "version": "0.57.5",
+      "gitref": "refs/tags/v0.57.5",
+      "url": "https://github.com/moonrepo/proto/releases/tag/v0.57.5"
     },
     "renovate": {
       "version": "43.227.0",
