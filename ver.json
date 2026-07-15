@@ -59,9 +59,9 @@
       "url": "https://github.com/moonrepo/proto/releases/tag/v0.58.2"
     },
     "renovate": {
-      "version": "43.263.9",
-      "gitref": "refs/tags/43.263.9",
-      "url": "https://github.com/renovatebot/renovate/releases/tag/43.263.9"
+      "version": "43.264.2",
+      "gitref": "refs/tags/43.264.2",
+      "url": "https://github.com/renovatebot/renovate/releases/tag/43.264.2"
     },
     "solidity-bin": {
       "version": "0.8.36",
