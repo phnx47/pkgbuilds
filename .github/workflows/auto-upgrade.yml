@@ -30,8 +30,13 @@ jobs:
             echo EOF
           } >> "$GITHUB_OUTPUT"
 
+      - name: Add summary
+        if: steps.nvcheck.outputs.nvcmp != ''
+        run: echo "${{ steps.nvcheck.outputs.nvcmp }}" >> $GITHUB_STEP_SUMMARY
+
       - name: Prepare upgrade matrix
         id: prepare
+        if: steps.nvcheck.outputs.nvcmp != ''
         run: |
           entries=()
           while IFS= read -r line || [[ -n "${line}" ]]; do
@@ -48,37 +53,10 @@ jobs:
           done < auto-upgrade.txt
           echo "pkgs=$(printf '%s\n' "${entries[@]}" | jq -cs .)" >> "$GITHUB_OUTPUT"
 
-  notify:
-    name: Notify
-    needs: check
-    if: needs.check.outputs.nvcmp != ''
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Add summary
-        run: echo "${{ needs.check.outputs.nvcmp }}" >> $GITHUB_STEP_SUMMARY
-
-      - name: Send mail
-        uses: dawidd6/action-send-mail@master
-        with:
-          server_address: ${{ secrets.MAIL_SMTP_ADDRESS }}
-          server_port: 465
-          username: ${{ secrets.MAIL_USERNAME }}
-          password: ${{ secrets.MAIL_PASSWORD }}
-          subject: AUR New Version Checker (${{ github.run_number }})
-          body: |
-            nvchecker found new versions via GitHub Actions [1]
-
-            ${{ needs.check.outputs.nvcmp }}
-
-            [1] https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          to: ${{ secrets.MAIL_TO }}
-          from: ${{ secrets.MAIL_FROM }}
-
   upgrade:
     name: Upgrade ${{ matrix.entry.pkg }}
     needs: check
-    if: needs.check.outputs.pkgs != '[]'
+    if: needs.check.outputs.nvcmp != '' && needs.check.outputs.pkgs != '[]'
     runs-on: ubuntu-latest
     container:
       image: archlinux:base-devel
