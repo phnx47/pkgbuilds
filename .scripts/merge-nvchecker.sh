@@ -20,11 +20,15 @@ dirs=$(find . -maxdepth 1 -type d -not -path "*/\.*" -not -path "." | sort)
 for dir in $dirs; do
   if [ -f "$dir/.nvchecker.toml" ]; then
     {
-      cat "$dir/.nvchecker.toml"
+      sed -e :a -e '/^\n*$/{$d;N;ba}' "$dir/.nvchecker.toml"
       echo ""
     } >>"${work_dir}/nvchecker.toml"
   fi
 done
 
 git add nvchecker.toml
-git commit -m "merge nvchecker.toml"
+if git diff --cached --quiet -- nvchecker.toml; then
+  echo "nvchecker.toml unchanged, nothing to commit"
+else
+  git commit -m "merge nvchecker.toml"
+fi
