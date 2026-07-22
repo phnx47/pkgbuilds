@@ -50,6 +50,12 @@ github = "moonrepo/moon"
 use_latest_release = true
 prefix = "v"
 
+[nub]
+source = "github"
+github = "nubjs/nub"
+use_latest_release = true
+prefix = "v"
+
 [nub-bin]
 source = "github"
 github = "nubjs/nub"

@@ -48,6 +48,11 @@
 	url = ssh://aur@aur.archlinux.org/moon-bin.git
 	branch = master
 	ignore = untracked
+[submodule "nub"]
+	path = nub
+	url = ssh://aur@aur.archlinux.org/nub.git
+	branch = master
+	ignore = untracked
 [submodule "nub-bin"]
 	path = nub-bin
 	url = ssh://aur@aur.archlinux.org/nub-bin.git
