@@ -48,6 +48,11 @@
 	url = ssh://aur@aur.archlinux.org/moon-bin.git
 	branch = master
 	ignore = untracked
+[submodule "nub-bin"]
+	path = nub-bin
+	url = ssh://aur@aur.archlinux.org/nub-bin.git
+	branch = master
+	ignore = untracked
 [submodule "oxen-electron-wallet"]
 	path = oxen-electron-wallet
 	url = ssh://aur@aur.archlinux.org/oxen-electron-wallet.git

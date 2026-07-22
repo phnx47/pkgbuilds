@@ -38,6 +38,11 @@
       "gitref": "refs/tags/v2.4.5",
       "url": "https://github.com/moonrepo/moon/releases/tag/v2.4.5"
     },
+    "nub-bin": {
+      "version": "0.4.13",
+      "gitref": "refs/tags/v0.4.13",
+      "url": "https://github.com/nubjs/nub/releases/tag/v0.4.13"
+    },
     "oxen-electron-wallet": {
       "version": "1.8.4",
       "gitref": "refs/tags/v1.8.4",

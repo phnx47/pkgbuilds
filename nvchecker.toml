@@ -17,7 +17,6 @@ github = "crypto-com/chain-desktop-wallet"
 use_latest_release = true
 prefix = "v"
 
-
 [cro-chain-maind-bin]
 source = "github"
 github = "crypto-org-chain/chain-main"
@@ -48,6 +47,12 @@ prefix = "v"
 [moon-bin]
 source = "github"
 github = "moonrepo/moon"
+use_latest_release = true
+prefix = "v"
+
+[nub-bin]
+source = "github"
+github = "nubjs/nub"
 use_latest_release = true
 prefix = "v"
 
