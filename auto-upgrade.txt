@@ -1,4 +1,3 @@
-cro-chain-maind-bin
 fastmail
 ledger-live: ledger-udev-git
 ledger-live-bin: ledger-udev-git
@@ -9,4 +8,3 @@ nub-bin
 proto
 proto-bin
 renovate
-solidity-bin
