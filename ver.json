@@ -29,16 +29,16 @@
       "version": "4.17.0"
     },
     "moon": {
-      "version": "2.5.2",
-      "gitref": "refs/tags/v2.5.2",
-      "url": "https://github.com/moonrepo/moon/releases/tag/v2.5.2",
-      "creation_time": "2026-08-19T18:16:53Z"
+      "version": "2.5.3",
+      "gitref": "refs/tags/v2.5.3",
+      "url": "https://github.com/moonrepo/moon/releases/tag/v2.5.3",
+      "creation_time": "2026-08-24T00:21:51Z"
     },
     "moon-bin": {
-      "version": "2.5.2",
-      "gitref": "refs/tags/v2.5.2",
-      "url": "https://github.com/moonrepo/moon/releases/tag/v2.5.2",
-      "creation_time": "2026-08-19T18:16:53Z"
+      "version": "2.5.3",
+      "gitref": "refs/tags/v2.5.3",
+      "url": "https://github.com/moonrepo/moon/releases/tag/v2.5.3",
+      "creation_time": "2026-08-24T00:21:51Z"
     },
     "nub": {
       "version": "0.7.5",
