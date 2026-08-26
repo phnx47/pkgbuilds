@@ -35,8 +35,7 @@ init:
 
 # Pull latest changes for all submodules
 pull:
-  git pull --rebase --autostash
-  git submodule foreach git pull --rebase --autostash origin master
+  .scripts/pull-submodules.sh
 
 # Clean all build artifacts from submodules
 clean:
