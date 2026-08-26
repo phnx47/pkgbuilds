@@ -46,6 +46,6 @@ clean:
 squash:
   msg="$(git show -s --format=%s)" && git reset --soft HEAD~2 && git commit -m "${msg}"
 
-# Analyze ELF binary dependencies
-readelf elf-file:
-  .scripts/readelf.sh {{elf-file}}
+# Scan an ELF binary for library dependencies
+scan-depends elf-file:
+  .scripts/scan-depends.sh {{elf-file}}
