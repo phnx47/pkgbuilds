@@ -1,6 +1,8 @@
 fastmail
 moon
 moon-bin
+nub
+nub-bin
 proto
 proto-bin
 renovate
