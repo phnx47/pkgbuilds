@@ -53,13 +53,13 @@ prefix = "v"
 [nub]
 source = "github"
 github = "nubjs/nub"
-use_latest_release = true
+use_max_tag = true
 prefix = "v"
 
 [nub-bin]
 source = "github"
 github = "nubjs/nub"
-use_latest_release = true
+use_max_tag = true
 prefix = "v"
 
 [oxen-electron-wallet]
