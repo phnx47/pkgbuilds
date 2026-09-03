@@ -29,10 +29,10 @@
       "version": "4.17.1"
     },
     "moon": {
-      "version": "2.5.3",
-      "gitref": "refs/tags/v2.5.3",
-      "url": "https://github.com/moonrepo/moon/releases/tag/v2.5.3",
-      "creation_time": "2026-08-24T00:21:51Z"
+      "version": "2.5.4",
+      "gitref": "refs/tags/v2.5.4",
+      "url": "https://github.com/moonrepo/moon/releases/tag/v2.5.4",
+      "creation_time": "2026-09-03T19:26:07Z"
     },
     "moon-bin": {
       "version": "2.5.3",
