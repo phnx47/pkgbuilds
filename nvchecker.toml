@@ -4,6 +4,7 @@
 [__config__]
 oldver = "ver.json"
 newver = "nver.json"
+keyfile = "keyfile.toml"
 
 [cro-chain-desktop]
 source = "github"

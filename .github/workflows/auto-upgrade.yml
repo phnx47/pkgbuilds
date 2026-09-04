@@ -20,6 +20,15 @@ jobs:
       - name: Install nvchecker
         run: pip install nvchecker
 
+      - name: Create nvchecker keyfile
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          {
+            echo "[keys]"
+            echo "github = \"${GH_TOKEN}\""
+          } > keyfile.toml
+
       - name: Run nvchecker
         id: nvcheck
         run: |
@@ -84,6 +93,17 @@ jobs:
           chmod 600 ~builder/.ssh/id_ed25519
           chown -R builder:builder ~builder/.ssh
           chown -R builder:builder "${GITHUB_WORKSPACE}"
+
+      - name: Create nvchecker keyfile
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          {
+            echo "[keys]"
+            echo "github = \"${GH_TOKEN}\""
+          } > "${GITHUB_WORKSPACE}/keyfile.toml"
+          chown builder:builder "${GITHUB_WORKSPACE}/keyfile.toml"
+          chmod 600 "${GITHUB_WORKSPACE}/keyfile.toml"
 
       - name: Configure git
         run: |

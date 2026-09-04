@@ -28,6 +28,10 @@ nvcheck-electron pkgname:
 merge-nvchecker:
   .scripts/merge-nvchecker.sh
 
+# Create keyfile.toml with a GitHub token (defaults to `gh auth token`)
+keyfile token=`gh auth token`:
+  @.scripts/create-keyfile.sh {{token}}
+
 # Initialize submodules and set them to master branch
 init:
   git submodule update --init

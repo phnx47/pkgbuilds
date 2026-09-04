@@ -14,6 +14,7 @@ dirs=$(find . -maxdepth 1 -type d -not -path "*/\.*" -not -path "." | sort)
   echo "[__config__]"
   echo "oldver = \"ver.json\""
   echo "newver = \"nver.json\""
+  echo "keyfile = \"keyfile.toml\""
   echo ""
 } >"${work_dir}/nvchecker.toml"
 
