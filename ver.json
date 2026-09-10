@@ -81,9 +81,10 @@
       "creation_time": "2026-09-10T16:52:57Z"
     },
     "solidity-bin": {
-      "version": "0.8.36",
-      "gitref": "refs/tags/v0.8.36",
-      "url": "https://github.com/argotorg/solidity/releases/tag/v0.8.36"
+      "version": "0.8.37",
+      "gitref": "refs/tags/v0.8.37",
+      "url": "https://github.com/argotorg/solidity/releases/tag/v0.8.37",
+      "creation_time": "2026-09-10T06:38:29Z"
     }
   }
 }
