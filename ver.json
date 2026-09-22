@@ -69,10 +69,10 @@
       "creation_time": "2026-09-22T16:05:11Z"
     },
     "proto-bin": {
-      "version": "0.62.2",
-      "gitref": "refs/tags/v0.62.2",
-      "url": "https://github.com/moonrepo/proto/releases/tag/v0.62.2",
-      "creation_time": "2026-09-11T03:51:34Z"
+      "version": "0.62.3",
+      "gitref": "refs/tags/v0.62.3",
+      "url": "https://github.com/moonrepo/proto/releases/tag/v0.62.3",
+      "creation_time": "2026-09-22T16:05:11Z"
     },
     "renovate": {
       "version": "44.107.0",
