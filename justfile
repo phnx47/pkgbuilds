@@ -52,3 +52,7 @@ squash:
 # Scan an ELF binary for library dependencies
 scan-depends elf-file:
   @.scripts/scan-depends.sh {{elf-file}}
+
+# Build a package for aarch64 under emulation (slow) to verify it compiles
+build-aarch64 pkgname:
+  @.scripts/build-aarch64.sh {{pkgname}}
