@@ -10,6 +10,17 @@ ledger-live | ledger-live-git)
     grep -E '^\s+electron:' | awk '{print $2}'
   ;;
 
+fastmail)
+  baseurl="https://dl.fastmailcdn.com/desktop/production/linux/x64"
+  appimg="$(curl -s "${baseurl}/latest-linux.yml" | awk '/^path:/ {print $2}')"
+  tmpdir="$(mktemp -d)"
+  trap 'rm -rf "${tmpdir}"' EXIT
+  curl -sLo "${tmpdir}/${appimg}" "${baseurl}/${appimg}"
+  chmod +x "${tmpdir}/${appimg}"
+  (cd "${tmpdir}" && "./${appimg}" --appimage-extract fastmail >/dev/null)
+  grep -aoE 'Electron/[0-9]+\.[0-9]+\.[0-9]+' "${tmpdir}/squashfs-root/fastmail" | head -1 | cut -d/ -f2
+  ;;
+
 cro-chain-desktop)
   curl -s https://raw.githubusercontent.com/crypto-com/chain-desktop-wallet/refs/heads/master/package.json |
     jq -r '.devDependencies.electron'
@@ -22,7 +33,7 @@ oxen-electron-wallet)
 
 *)
   echo "Error: Unknown pkgname '${pkgname}'" >&2
-  echo "Available pkgnames: ledger-live, ledger-live-git, cro-chain-desktop, oxen-electron-wallet" >&2
+  echo "Available pkgnames: ledger-live, ledger-live-git, fastmail, cro-chain-desktop, oxen-electron-wallet" >&2
   exit 1
   ;;
 esac
