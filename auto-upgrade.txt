@@ -3,8 +3,6 @@ ledger-live: ledger-udev-git
 ledger-live-bin: ledger-udev-git
 moon
 moon-bin
-nub
-nub-bin
 proto
 proto-bin
 renovate
