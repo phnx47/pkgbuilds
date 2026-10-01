@@ -41,10 +41,10 @@
       "creation_time": "2026-09-28T03:21:02Z"
     },
     "nub": {
-      "version": "0.9.5",
-      "gitref": "refs/tags/v0.9.5",
-      "revision": "5727154ead4ee4f5e34218976fc2a08ceefc0460",
-      "url": "https://github.com/nubjs/nub/releases/tag/v0.9.5"
+      "version": "0.9.6",
+      "gitref": "refs/tags/v0.9.6",
+      "revision": "fdf8d313125b4dfc15a5900477077876284aa5a3",
+      "url": "https://github.com/nubjs/nub/releases/tag/v0.9.6"
     },
     "nub-bin": {
       "version": "0.9.5",
