@@ -76,10 +76,10 @@
       "creation_time": "2026-10-08T05:18:43Z"
     },
     "renovate": {
-      "version": "44.151.0",
-      "gitref": "refs/tags/44.151.0",
-      "url": "https://github.com/renovatebot/renovate/releases/tag/44.151.0",
-      "creation_time": "2026-10-11T18:46:11Z"
+      "version": "44.151.2",
+      "gitref": "refs/tags/44.151.2",
+      "url": "https://github.com/renovatebot/renovate/releases/tag/44.151.2",
+      "creation_time": "2026-10-12T01:56:41Z"
     },
     "solidity-bin": {
       "version": "0.8.37",
