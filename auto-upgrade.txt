@@ -1,6 +1,6 @@
 cro-chain-maind-bin
 fastmail
-ledger-live: ledger-udev-git
+ledger-live: ledger-udev-git electron45-bin
 ledger-live-bin: ledger-udev-git
 moon
 moon-bin
