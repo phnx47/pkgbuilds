@@ -48,10 +48,10 @@
       "creation_time": "2026-11-23T17:29:01Z"
     },
     "nub-bin": {
-      "version": "0.11.2",
-      "gitref": "refs/tags/v0.11.2",
-      "url": "https://github.com/nubjs/nub/releases/tag/v0.11.2",
-      "creation_time": "2026-11-23T17:29:01Z"
+      "version": "0.11.3",
+      "gitref": "refs/tags/v0.11.3",
+      "url": "https://github.com/nubjs/nub/releases/tag/v0.11.3",
+      "creation_time": "2026-11-27T19:33:08Z"
     },
     "oxen-electron-wallet": {
       "version": "1.8.4",
